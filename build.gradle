@@ -3,34 +3,33 @@ plugins {
     id 'maven-publish'
 //    id 'com.jfrog.bintray.gradle' version '1.8.4'
 }
-apply plugin: 'com.jfrog.bintray'
-ext {
-    
-    bintrayRepo = "Test"
-    bintrayName = "com.fudge.test"
-    
-    libraryName = "testjvmlib"
-
-    
-    
-    
-    
-    publishedGroupId = "com.fudge.testjvmlib"
-    artifact = "testjvmlib"
-    libraryVersion = "1.0.0"
-
-    
-    libraryDescription = "Test test testtt"
-    siteUrl = "https://github.com/natanfudge/testjvmlib"
-    gitUrl = "https://github.com/natanfudge/testjvmlib.git"
-    developerId = "fudge"
-    developerName = "Fudge"
-    
-    licenseName = "The Apache Software License, Version 2.0"
-    licenseUrl = "http://www.apache.org/licenses/LICENSE-2.0.txt"
-    allLicenses = ["Apache-2.0"]
-
-}
+//ext {
+//    
+//    bintrayRepo = "Test"
+//    bintrayName = "com.fudge.test"
+//    
+//    libraryName = "testjvmlib"
+//
+//    
+//    
+//    
+//    
+//    publishedGroupId = "com.fudge.testjvmlib"
+//    artifact = "testjvmlib"
+//    libraryVersion = "1.0.0"
+//
+//    
+//    libraryDescription = "Test test testtt"
+//    siteUrl = "https://github.com/natanfudge/testjvmlib"
+//    gitUrl = "https://github.com/natanfudge/testjvmlib.git"
+//    developerId = "fudge"
+//    developerName = "Fudge"
+//    
+//    licenseName = "The Apache Software License, Version 2.0"
+//    licenseUrl = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+//    allLicenses = ["Apache-2.0"]
+//
+//}
 
 group 'fudge'
 version '1.0-SNAPSHOT'
@@ -51,24 +50,24 @@ compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
 
-publishing {
-    publications {
-        myLibrary(MavenPublication) {
-            from components.java
-        }
-    }
+//publishing {
+//    publications {
+//        myLibrary(MavenPublication) {
+//            from components.java
+//        }
+//    }
+//
+//    repositories {
+//        maven {
+//            name = 'myRepo'
+//            url = "file://${buildDir}/repo"
+//        }
+//    }
+//}
+//print project.rootProject
 
-    repositories {
-        maven {
-            name = 'myRepo'
-            url = "file://${buildDir}/repo"
-        }
-    }
-}
-print project.rootProject
-
-if (project.rootProject.file("local.properties").exists()) {
-    apply from: "https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle"
-    apply from: "https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle"
-
-}
+//if (project.rootProject.file("local.properties").exists()) {
+//    apply from: "https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle"
+//    apply from: "https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle"
+//
+//}
