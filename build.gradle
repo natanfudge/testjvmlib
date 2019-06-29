@@ -1,6 +1,7 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.3.40'
     id 'maven-publish'
+    id 'maven'
 //    id 'com.jfrog.bintray.gradle' version '1.8.4'
 }
 //ext {
@@ -50,20 +51,20 @@ compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
 
-//publishing {
-//    publications {
-//        myLibrary(MavenPublication) {
-//            from components.java
-//        }
-//    }
-//
-//    repositories {
-//        maven {
-//            name = 'myRepo'
-//            url = "file://${buildDir}/repo"
-//        }
-//    }
-//}
+publishing {
+    publications {
+        myLibrary(MavenPublication) {
+            from components.java
+        }
+    }
+
+    repositories {
+        maven {
+            name = 'myRepo'
+            url = "file://${buildDir}/repo"
+        }
+    }
+}
 //print project.rootProject
 
 //if (project.rootProject.file("local.properties").exists()) {
