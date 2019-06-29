@@ -1,0 +1,1 @@
+fun printUsefulText() = println("Useful text. Boy I am glad I have this library.")
